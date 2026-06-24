@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IELTS Academic – Complete Question Type Guide</title>
+  <meta name="description" content="Interactive IELTS Academic question type checklist and strategies guide covering all 28 question types across Listening, Reading, Writing, and Speaking." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:           #0d0f14;
+      --surface:      #13161e;
+      --surface-2:    #1a1e29;
+      --surface-3:    #20253a;
+      --border:       rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.15);
+      --listening-h:  #6c63ff;
+      --listening-bg: rgba(108,99,255,0.08);
+      --reading-h:    #00d4aa;
+      --reading-bg:   rgba(0,212,170,0.08);
+      --writing-h:    #ff7849;
+      --writing-bg:   rgba(255,120,73,0.08);
+      --speaking-h:   #f7c948;
+      --speaking-bg:  rgba(247,201,72,0.08);
+      --text-primary:   #eef0f7;
+      --text-secondary: #8c93ad;
+      --text-muted:     #555e7a;
+      --check-color:  #4ade80;
+      --radius-sm:    8px;
+      --radius-md:    14px;
+      --radius-lg:    22px;
+      --transition:   0.22s cubic-bezier(0.4,0,0.2,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-primary); min-height: 100vh; line-height: 1.6; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
+    .blob { position: fixed; border-radius: 50%; filter: blur(80px); opacity: 0.18; pointer-events: none; z-index: 0; animation: drift 18s ease-in-out infinite alternate; }
+    .blob-1 { width: 500px; height: 500px; background: radial-gradient(circle, #6c63ff, transparent); top: -100px; left: -100px; }
+    .blob-2 { width: 400px; height: 400px; background: radial-gradient(circle, #00d4aa, transparent); bottom: -80px; right: -80px; animation-delay: -6s; }
+    .blob-3 { width: 350px; height: 350px; background: radial-gradient(circle, #ff7849, transparent); top: 50%; left: 50%; transform: translate(-50%,-50%); animation-delay: -12s; opacity: 0.09; }
+    @keyframes drift { from { transform: translate(0,0) scale(1); } to { transform: translate(30px, 20px) scale(1.05); } }
+    .container { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+    header { text-align: center; margin-bottom: 40px; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 6px 16px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 20px; }
+    .badge svg { width: 14px; height: 14px; }
+    h1 { font-family: 'Outfit', sans-serif; font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 14px; }
+    .accent-blue { background: linear-gradient(135deg, #6c63ff, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .accent-green { background: linear-gradient(135deg, #00d4aa, #4ade80); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .subtitle { color: var(--text-secondary); max-width: 560px; margin: 0 auto; font-size: 1.05rem; }
+    /* Global Progress */
+    .global-progress { display: flex; align-items: center; gap: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 32px; margin-bottom: 32px; }
+    .progress-ring-wrap { position: relative; flex-shrink: 0; }
+    .progress-ring { width: 88px; height: 88px; transform: rotate(-90deg); }
+    .ring-bg { fill: none; stroke: var(--surface-3); stroke-width: 6; }
+    .ring-fill { fill: none; stroke: url(#ringGrad); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 251.33; stroke-dashoffset: 251.33; transition: stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1); }
+    .ring-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .ring-pct { font-family: 'Outfit', sans-serif; font-size: 1.35rem; font-weight: 800; line-height: 1; }
+    .ring-label { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+    .progress-info h2 { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+    .progress-info p { font-size: 0.82rem; color: var(--text-secondary); }
+    .progress-count { font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 800; }
+    .section-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .chip { display: inline-flex; align-items: center; gap: 6px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 5px 12px; font-size: 0.72rem; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: border-color var(--transition), color var(--transition); }
+    .chip:hover { border-color: var(--border-hover); color: var(--text-primary); }
+    .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    /* Tab Nav */
+    .tab-nav { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 5px; margin-bottom: 28px; }
+    .tab-btn { flex: 1; padding: 11px 20px; background: transparent; border: none; border-radius: 10px; color: var(--text-secondary); font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: background var(--transition), color var(--transition); font-family: inherit; }
+    .tab-btn.active { background: var(--surface-3); color: var(--text-primary); }
+    .tab-btn:hover:not(.active) { background: rgba(255,255,255,0.04); color: var(--text-primary); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    /* Section Cards */
+    .section-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); margin-bottom: 20px; overflow: hidden; transition: border-color var(--transition); animation: fadeUp 0.45s ease both; }
+    .section-card:hover { border-color: var(--border-hover); }
+    .section-header { display: flex; align-items: center; gap: 16px; padding: 22px 28px; cursor: pointer; user-select: none; }
+    .section-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .section-meta { flex: 1; }
+    .section-meta h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 2px; }
+    .section-meta p { font-size: 0.78rem; color: var(--text-secondary); }
+    .section-progress-bar-wrap { display: flex; align-items: center; gap: 12px; margin-right: 8px; }
+    .section-pct-label { font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); white-space: nowrap; min-width: 36px; text-align: right; }
+    .section-progress-bar { width: 90px; height: 5px; background: var(--surface-3); border-radius: 999px; overflow: hidden; }
+    .section-progress-fill { height: 100%; width: 0%; border-radius: 999px; transition: width 0.5s cubic-bezier(0.4,0,0.2,1); }
+    .listening .section-progress-fill, #listening .section-progress-fill { background: var(--listening-h); }
+    .reading  .section-progress-fill, #reading  .section-progress-fill { background: var(--reading-h); }
+    .writing  .section-progress-fill, #writing  .section-progress-fill { background: var(--writing-h); }
+    .speaking .section-progress-fill, #speaking .section-progress-fill { background: var(--speaking-h); }
+    .chevron { width: 20px; height: 20px; color: var(--text-muted); transition: transform var(--transition), color var(--transition); flex-shrink: 0; }
+    .section-card.open .chevron { transform: rotate(180deg); color: var(--text-secondary); }
+    .section-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .section-card.open .section-body { max-height: 9999px; }
+    .section-controls { display: flex; align-items: center; justify-content: space-between; padding: 4px 28px 14px; }
+    .section-item-count { font-size: 0.78rem; color: var(--text-muted); }
+    .btn-check-all { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 14px; font-size: 0.76rem; font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all var(--transition); font-family: inherit; }
+    .btn-check-all:hover { border-color: var(--border-hover); color: var(--text-primary); }
+    .subsection-label { margin: 4px 28px 6px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); padding-top: 10px; border-top: 1px solid var(--border); }
+    .subsection-label:first-child { border-top: none; padding-top: 0; }
+    /* Checklist */
+    .checklist { list-style: none; padding: 0 20px 20px; }
+    .checklist-item { position: relative; }
+    .checklist-item input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
+    .checklist-item label { display: flex; align-items: flex-start; gap: 14px; padding: 14px 8px; border-radius: var(--radius-md); cursor: pointer; transition: background var(--transition); border-bottom: 1px solid var(--border); }
+    .checklist-item:last-child label { border-bottom: none; }
+    .checklist-item label:hover { background: rgba(255,255,255,0.03); }
+    .custom-check { width: 22px; height: 22px; border: 2px solid var(--border-hover); border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: all var(--transition); margin-top: 1px; }
+    .custom-check svg { width: 12px; height: 10px; stroke: transparent; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke var(--transition); }
+    input:checked + label .custom-check { background: var(--check-color); border-color: var(--check-color); box-shadow: 0 0 14px rgba(74,222,128,0.35); }
+    input:checked + label .custom-check svg { stroke: #0d0f14; }
+    input:checked + label { background: rgba(74,222,128,0.04); }
+    input:checked + label .item-title { color: var(--text-muted); text-decoration: line-through; }
+    .item-content { flex: 1; min-width: 0; }
+    .item-title { display: block; font-weight: 600; font-size: 0.93rem; color: var(--text-primary); margin-bottom: 3px; transition: color var(--transition); }
+    .item-desc { display: block; font-size: 0.79rem; color: var(--text-secondary); line-height: 1.5; }
+    .item-tag { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; border: 1px solid; }
+    #listening .item-tag { color: var(--listening-h); border-color: rgba(108,99,255,0.3); background: rgba(108,99,255,0.08); }
+    #reading  .item-tag { color: var(--reading-h);   border-color: rgba(0,212,170,0.3); background: rgba(0,212,170,0.08); }
+    #writing  .item-tag { color: var(--writing-h);   border-color: rgba(255,120,73,0.3); background: rgba(255,120,73,0.08); }
+    #speaking .item-tag { color: var(--speaking-h);  border-color: rgba(247,201,72,0.3); background: rgba(247,201,72,0.08); }
+    /* Tips Tab */
+    .tips-section { margin-bottom: 20px; }
+    .tips-section-header { display: flex; align-items: center; gap: 12px; padding: 18px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); cursor: pointer; transition: border-color var(--transition); }
+    .tips-section-header:hover { border-color: var(--border-hover); }
+    .tips-section-header.open { border-radius: var(--radius-lg) var(--radius-lg) 0 0; border-bottom-color: transparent; }
+    .tips-section-icon { font-size: 1.4rem; }
+    .tips-section-title { flex: 1; }
+    .tips-section-title h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 2px; }
+    .tips-section-title p { font-size: 0.77rem; color: var(--text-secondary); }
+    .tips-section-body { display: none; border: 1px solid var(--border); border-top: none; border-radius: 0 0 var(--radius-lg) var(--radius-lg); background: var(--surface); padding: 8px 0 16px; }
+    .tips-section-body.open { display: block; }
+    /* Strategy Card */
+    .strategy-card { border: 1px solid var(--border); border-radius: var(--radius-md); margin: 8px 20px; overflow: hidden; }
+    .strategy-header { display: flex; align-items: center; gap: 12px; padding: 14px 18px; cursor: pointer; background: var(--surface-2); transition: background var(--transition); }
+    .strategy-header:hover { background: var(--surface-3); }
+    .strategy-num { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 800; flex-shrink: 0; }
+    .strategy-title { flex: 1; font-size: 0.88rem; font-weight: 600; }
+    .strategy-tag { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; padding: 2px 8px; border-radius: 999px; border: 1px solid; }
+    .strategy-chevron { width: 16px; height: 16px; color: var(--text-muted); transition: transform var(--transition); flex-shrink: 0; }
+    .strategy-card.open .strategy-chevron { transform: rotate(180deg); }
+    .strategy-body { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1); }
+    .strategy-card.open .strategy-body { max-height: 4000px; }
+    .strategy-content { padding: 18px 20px; }
+    .what-box { background: var(--surface-3); border-radius: var(--radius-sm); padding: 12px 16px; margin-bottom: 14px; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.65; }
+    .what-box strong { color: var(--text-primary); display: block; margin-bottom: 4px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; }
+    .tips-list { list-style: none; padding: 0; }
+    .tips-list li { display: flex; gap: 10px; padding: 7px 0; font-size: 0.82rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); line-height: 1.55; }
+    .tips-list li:last-child { border-bottom: none; }
+    .tip-bullet { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 800; margin-top: 1px; }
+    .mistakes-box { margin-top: 14px; background: rgba(255,90,90,0.06); border: 1px solid rgba(255,90,90,0.15); border-radius: var(--radius-sm); padding: 12px 16px; }
+    .mistakes-box strong { display: block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.07em; color: #f87171; margin-bottom: 8px; }
+    .mistakes-box ul { list-style: none; padding: 0; }
+    .mistakes-box li { font-size: 0.8rem; color: var(--text-secondary); padding: 4px 0; display: flex; gap: 8px; line-height: 1.5; }
+    .mistakes-box li::before { content: "✗"; color: #f87171; flex-shrink: 0; font-size: 0.7rem; margin-top: 2px; }
+    .time-box { margin-top: 10px; background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.15); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 0.8rem; color: var(--text-secondary); display: flex; gap: 10px; align-items: flex-start; line-height: 1.55; }
+    .time-box::before { content: "⏱"; flex-shrink: 0; font-size: 0.85rem; }
+    /* Listening theme */
+    .lcard .strategy-num { background: rgba(108,99,255,0.15); color: var(--listening-h); }
+    .lcard .strategy-tag { color: var(--listening-h); border-color: rgba(108,99,255,0.3); background: rgba(108,99,255,0.07); }
+    .lcard .tip-bullet { background: rgba(108,99,255,0.15); color: var(--listening-h); }
+    /* Reading theme */
+    .rcard .strategy-num { background: rgba(0,212,170,0.12); color: var(--reading-h); }
+    .rcard .strategy-tag { color: var(--reading-h); border-color: rgba(0,212,170,0.3); background: rgba(0,212,170,0.07); }
+    .rcard .tip-bullet { background: rgba(0,212,170,0.12); color: var(--reading-h); }
+    /* Writing theme */
+    .wcard .strategy-num { background: rgba(255,120,73,0.12); color: var(--writing-h); }
+    .wcard .strategy-tag { color: var(--writing-h); border-color: rgba(255,120,73,0.3); background: rgba(255,120,73,0.07); }
+    .wcard .tip-bullet { background: rgba(255,120,73,0.12); color: var(--writing-h); }
+    /* Speaking theme */
+    .scard .strategy-num { background: rgba(247,201,72,0.12); color: var(--speaking-h); }
+    .scard .strategy-tag { color: var(--speaking-h); border-color: rgba(247,201,72,0.3); background: rgba(247,201,72,0.07); }
+    .scard .tip-bullet { background: rgba(247,201,72,0.12); color: var(--speaking-h); }
+    /* Celebration */
+    #celebration { position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.4s; }
+    #celebration.show { opacity: 1; pointer-events: all; }
+    .celebrate-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 48px 40px; text-align: center; max-width: 380px; }
+    .celebrate-emoji { font-size: 3.5rem; margin-bottom: 16px; }
+    .celebrate-card h2 { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
+    .celebrate-card p  { color: var(--text-secondary); margin-bottom: 28px; }
+    .btn-dismiss { background: linear-gradient(135deg, var(--listening-h), var(--reading-h)); border: none; border-radius: 999px; padding: 12px 36px; color: #fff; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: opacity var(--transition), transform var(--transition); }
+    .btn-dismiss:hover { opacity: 0.88; transform: translateY(-1px); }
+    footer { text-align: center; padding: 40px 0 20px; font-size: 0.78rem; color: var(--text-muted); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .section-card { animation: fadeUp 0.45s ease both; }
+    .section-card:nth-child(1) { animation-delay: 0.05s; }
+    .section-card:nth-child(2) { animation-delay: 0.12s; }
+    .section-card:nth-child(3) { animation-delay: 0.19s; }
+    .section-card:nth-child(4) { animation-delay: 0.26s; }
+    @media (max-width:600px) {
+      .section-header { padding: 18px 20px; gap: 12px; }
+      .section-body { padding: 0; }
+      .section-progress-bar-wrap { display: none; }
+      .global-progress { padding: 20px; gap: 20px; flex-direction: column; align-items: flex-start; }
+      .tab-btn { font-size: 0.8rem; padding: 10px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="blob blob-3" aria-hidden="true"></div>
+  <div id="celebration" role="dialog" aria-modal="true" aria-label="All items checked">
+    <div class="celebrate-card">
+      <div class="celebrate-emoji">🎓</div>
+      <h2>All Done!</h2>
+      <p>You've reviewed every question type across all four IELTS Academic sections. Go smash that Band 7+!</p>
+      <button class="btn-dismiss" id="dismissBtn" onclick="dismissCelebration()">Let's go! 🚀</button>
+    </div>
+  </div>
+  <div class="container">
+    <header>
+      <div class="badge">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.396 0 2.7.391 3.8 1.068A7.968 7.968 0 0113.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0013.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+        IELTS Academic
+      </div>
+      <h1>Question Type<br /><span class="accent-blue">Master</span><span class="accent-green">guide</span></h1>
+      <p class="subtitle">All 28 question types across Listening, Reading, Writing &amp; Speaking — with detailed strategies for each.</p>
+    </header>
+    <div class="global-progress" id="globalProgress">
+      <div class="progress-ring-wrap">
+        <svg class="progress-ring" viewBox="0 0 88 88" aria-hidden="true">
+          <defs>
+            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#6c63ff"/>
+              <stop offset="50%" stop-color="#00d4aa"/>
+              <stop offset="100%" stop-color="#f7c948"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-bg" cx="44" cy="44" r="40"/>
+          <circle class="ring-fill" cx="44" cy="44" r="40" id="ringFill"/>
+        </svg>
+        <div class="ring-text">
+          <span class="ring-pct" id="ringPct">0%</span>
+          <span class="ring-label">done</span>
+        </div>
+      </div>
+      <div class="progress-info">
+        <h2>Overall Progress</h2>
+        <p>Across all four IELTS sections</p>
+        <div style="margin-top:10px">
+          <span class="progress-count" id="globalCount">0</span>
+          <span class="progress-count" style="color:var(--text-muted)"> / <span id="globalTotal">0</span></span>
+          <span style="font-size:0.78rem;color:var(--text-muted);margin-left:4px">types mastered</span>
+        </div>
+        <div class="section-chips" id="sectionChips">
+          <div class="chip" data-target="listening" id="chip-listening"><span class="dot" style="background:var(--listening-h)"></span><span id="chip-l-label">Listening</span></div>
+          <div class="chip" data-target="reading"   id="chip-reading">  <span class="dot" style="background:var(--reading-h)"></span>  <span id="chip-r-label">Reading</span></div>
+          <div class="chip" data-target="writing"   id="chip-writing">  <span class="dot" style="background:var(--writing-h)"></span>  <span id="chip-w-label">Writing</span></div>
+          <div class="chip" data-target="speaking"  id="chip-speaking"> <span class="dot" style="background:var(--speaking-h)"></span> <span id="chip-s-label">Speaking</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- Tab Nav -->
+    <div class="tab-nav" role="tablist">
+      <button class="tab-btn active" id="tab-checklist" role="tab" aria-selected="true"  onclick="switchTab('checklist')">✅ Checklist</button>
+      <button class="tab-btn"        id="tab-tips"      role="tab" aria-selected="false" onclick="switchTab('tips')">💡 Tips &amp; Strategies</button>
+    </div>    <!-- ═══════════════════════════════════════════════════════
+         TAB 1: CHECKLIST
+    ═══════════════════════════════════════════════════════ -->
+    <div class="tab-panel active" id="panel-checklist">
+
+      <!-- LISTENING -->
+      <div class="section-card open" id="listening">
+        <div class="section-header" onclick="toggleSection('listening')" role="button" aria-expanded="true" tabindex="0">
+          <div class="section-icon">🎧</div>
+          <div class="section-meta"><h2>Listening</h2><p>4 sections · ~30 min + 10 min transfer · 40 questions</p></div>
+          <div class="section-progress-bar-wrap"><div class="section-pct-label" id="l-pct">0 / 6</div><div class="section-progress-bar"><div class="section-progress-fill" id="l-bar"></div></div></div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-body" id="listening-body">
+          <div class="section-controls">
+            <span class="section-item-count" id="l-count-label">0 of 6 mastered</span>
+            <button class="btn-check-all" onclick="checkAll('listening')" id="l-toggle-btn">Check All</button>
+          </div>
+          <ul class="checklist" id="list-listening">
+            <li class="checklist-item"><input type="checkbox" id="l1" data-section="listening" /><label for="l1"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Multiple Choice</span><span class="item-desc">Choose one correct answer (A–C) or multiple correct answers (A–E) based on what you hear in the recording.</span></span><span class="item-tag">MCQ</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="l2" data-section="listening" /><label for="l2"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Matching</span><span class="item-desc">Match a list of items (e.g. people, events) to a set of options from a box. Options can be used more than once.</span></span><span class="item-tag">Match</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="l3" data-section="listening" /><label for="l3"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Plan / Map / Diagram Labelling</span><span class="item-desc">Label a floor plan, map, or diagram using words heard in the audio. Requires spatial listening and orientation.</span></span><span class="item-tag">Visual</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="l4" data-section="listening" /><label for="l4"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Form / Note / Table / Flow-chart / Summary Completion</span><span class="item-desc">Fill in blanks in structured information using words heard from the recording. Word limit always applies.</span></span><span class="item-tag">Fill</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="l5" data-section="listening" /><label for="l5"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Sentence Completion</span><span class="item-desc">Complete sentences using words taken directly from the audio. Word limit is always stated (e.g. ONE WORD ONLY).</span></span><span class="item-tag">Sentence</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="l6" data-section="listening" /><label for="l6"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Short-Answer Questions</span><span class="item-desc">Answer wh-questions in a specified word limit using information heard in the recording. Tests detail comprehension.</span></span><span class="item-tag">Short</span></label></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- READING -->
+      <div class="section-card open" id="reading">
+        <div class="section-header" onclick="toggleSection('reading')" role="button" aria-expanded="true" tabindex="0">
+          <div class="section-icon">📖</div>
+          <div class="section-meta"><h2>Reading</h2><p>3 passages · 60 min · 40 questions · no extra transfer time</p></div>
+          <div class="section-progress-bar-wrap"><div class="section-pct-label" id="r-pct">0 / 11</div><div class="section-progress-bar"><div class="section-progress-fill" id="r-bar"></div></div></div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-body" id="reading-body">
+          <div class="section-controls">
+            <span class="section-item-count" id="r-count-label">0 of 11 mastered</span>
+            <button class="btn-check-all" onclick="checkAll('reading')" id="r-toggle-btn">Check All</button>
+          </div>
+          <ul class="checklist" id="list-reading">
+            <li class="checklist-item"><input type="checkbox" id="r1" data-section="reading" /><label for="r1"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Multiple Choice</span><span class="item-desc">Choose one answer (A–D) or multiple correct answers from the passage. Tests detailed comprehension and main ideas.</span></span><span class="item-tag">MCQ</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="r2" data-section="reading" /><label for="r2"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Identifying Information (True / False / Not Given)</span><span class="item-desc">Decide if factual statements agree with (True), contradict (False), or are absent from (Not Given) the passage.</span></span><span class="item-tag">T/F/NG</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="r3" data-section="reading" /><label for="r3"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Identifying Writer's Views (Yes / No / Not Given)</span><span class="item-desc">Decide if statements reflect the writer's opinions (Yes), contradict them (No), or aren't addressed (Not Given).</span></span><span class="item-tag">Y/N/NG</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="r4" data-section="reading" /><label for="r4"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Matching Information</span><span class="item-desc">Match a set of statements or details to the correct paragraph in the passage. A paragraph may be used more than once.</span></span><span class="item-tag">Match</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="r5" data-section="reading" /><label for="r5"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Matching Headings</span><span class="item-desc">Match headings from a list to sections or paragraphs of the passage. Tests ability to identify main ideas.</span></span><span class="item-tag">Headings</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="r6" data-section="reading" /><label for="r6"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Matching Features</span><span class="item-desc">Match statements to a set of features (researchers, theories, time periods). Tests attribution of specific information.</span></span><span class="item-tag">Features</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="r7" data-section="reading" /><label for="r7"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Matching Sentence Endings</span><span class="item-desc">Complete sentence halves by matching them to endings from a box. Tests understanding of relationships within the text.</span></span><span class="item-tag">Endings</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="r8" data-section="reading" /><label for="r8"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Sentence Completion</span><span class="item-desc">Fill in gaps in sentences using words taken directly from the passage, within a specified word limit.</span></span><span class="item-tag">Sentence</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="r9" data-section="reading" /><label for="r9"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Summary / Note / Table / Flow-chart Completion</span><span class="item-desc">Complete a summary, notes, table, or flow-chart using words from the passage or a given word box.</span></span><span class="item-tag">Fill</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="r10" data-section="reading" /><label for="r10"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Diagram Label Completion</span><span class="item-desc">Label a diagram (machine, structure, process) using words from the passage. Often requires close technical reading.</span></span><span class="item-tag">Diagram</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="r11" data-section="reading" /><label for="r11"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Short-Answer Questions</span><span class="item-desc">Answer wh-questions using words directly from the passage within a specified word limit (e.g., NO MORE THAN THREE WORDS).</span></span><span class="item-tag">Short</span></label></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- WRITING -->
+      <div class="section-card open" id="writing">
+        <div class="section-header" onclick="toggleSection('writing')" role="button" aria-expanded="true" tabindex="0">
+          <div class="section-icon">✍️</div>
+          <div class="section-meta"><h2>Writing</h2><p>2 tasks · 60 min · Task 1 ≥ 150 words · Task 2 ≥ 250 words</p></div>
+          <div class="section-progress-bar-wrap"><div class="section-pct-label" id="w-pct">0 / 8</div><div class="section-progress-bar"><div class="section-progress-fill" id="w-bar"></div></div></div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-body" id="writing-body">
+          <div class="section-controls">
+            <span class="section-item-count" id="w-count-label">0 of 8 mastered</span>
+            <button class="btn-check-all" onclick="checkAll('writing')" id="w-toggle-btn">Check All</button>
+          </div>
+          <div class="subsection-label">Task 1 — Data / Visual Description (≥ 150 words)</div>
+          <ul class="checklist" id="list-writing">
+            <li class="checklist-item"><input type="checkbox" id="w1" data-section="writing" /><label for="w1"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Graph / Chart / Table Description</span><span class="item-desc">Describe and summarise data from bar charts, line graphs, pie charts, or tables. Report key trends and comparisons objectively.</span></span><span class="item-tag">Task 1</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="w2" data-section="writing" /><label for="w2"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Process Diagram Description</span><span class="item-desc">Describe a natural or man-made process or cycle in a logical sequence. No data to report — describe stages and connections.</span></span><span class="item-tag">Task 1</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="w3" data-section="writing" /><label for="w3"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Map Description</span><span class="item-desc">Compare two maps showing changes to a place over time, or describe a proposed development plan. Objective spatial language required.</span></span><span class="item-tag">Task 1</span></label></li>
+            <div class="subsection-label">Task 2 — Essay (≥ 250 words)</div>
+            <li class="checklist-item"><input type="checkbox" id="w4" data-section="writing" /><label for="w4"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Opinion Essay (Agree / Disagree)</span><span class="item-desc">State and fully defend your position on a statement. A clear, consistent stance is required throughout the essay.</span></span><span class="item-tag">Task 2</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="w5" data-section="writing" /><label for="w5"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Discussion Essay (Both Sides + Opinion)</span><span class="item-desc">Discuss two opposing viewpoints and give your own opinion. Balanced treatment of both perspectives is expected.</span></span><span class="item-tag">Task 2</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="w6" data-section="writing" /><label for="w6"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Problem &amp; Solution Essay</span><span class="item-desc">Identify causes/problems and propose realistic solutions. Common prompts: "What are the problems? What solutions can you suggest?"</span></span><span class="item-tag">Task 2</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="w7" data-section="writing" /><label for="w7"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Advantages &amp; Disadvantages Essay</span><span class="item-desc">Weigh the pros and cons of a given phenomenon. May or may not require stating your overall opinion — read the prompt carefully.</span></span><span class="item-tag">Task 2</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="w8" data-section="writing" /><label for="w8"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Double Question Essay</span><span class="item-desc">Answer two explicitly stated questions in the prompt (e.g., "Why is this? Is it a positive or negative development?").</span></span><span class="item-tag">Task 2</span></label></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SPEAKING -->
+      <div class="section-card open" id="speaking">
+        <div class="section-header" onclick="toggleSection('speaking')" role="button" aria-expanded="true" tabindex="0">
+          <div class="section-icon">🗣️</div>
+          <div class="section-meta"><h2>Speaking</h2><p>3 parts · 11–14 min · Face-to-face with examiner</p></div>
+          <div class="section-progress-bar-wrap"><div class="section-pct-label" id="s-pct">0 / 3</div><div class="section-progress-bar"><div class="section-progress-fill" id="s-bar"></div></div></div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-body" id="speaking-body">
+          <div class="section-controls">
+            <span class="section-item-count" id="s-count-label">0 of 3 mastered</span>
+            <button class="btn-check-all" onclick="checkAll('speaking')" id="s-toggle-btn">Check All</button>
+          </div>
+          <ul class="checklist" id="list-speaking">
+            <li class="checklist-item"><input type="checkbox" id="s1" data-section="speaking" /><label for="s1"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Part 1 — Interview / Personal Questions</span><span class="item-desc">4–5 min. Answer questions about yourself and familiar topics (home, work, studies, hobbies). Short, conversational responses.</span></span><span class="item-tag">Part 1</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="s2" data-section="speaking" /><label for="s2"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Part 2 — Individual Long Turn (Cue Card)</span><span class="item-desc">1 min to prepare, then speak 1–2 min on a given cue card topic. Covers personal experiences, places, objects, or events.</span></span><span class="item-tag">Part 2</span></label></li>
+            <li class="checklist-item"><input type="checkbox" id="s3" data-section="speaking" /><label for="s3"><span class="custom-check"><svg viewBox="0 0 12 10"><polyline points="1.5,5 4.5,8 10.5,1"/></svg></span><span class="item-content"><span class="item-title">Part 3 — Two-Way Discussion</span><span class="item-desc">4–5 min. Abstract discussion linked to the Part 2 topic. Examiner asks opinions, analysis, and speculative questions.</span></span><span class="item-tag">Part 3</span></label></li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /panel-checklist -->    <!-- ═══════════════════════════════════════════════════════
+         TAB 2: TIPS & STRATEGIES
+    ═══════════════════════════════════════════════════════ -->
+    <div class="tab-panel" id="panel-tips">
+
+      <!-- ─── LISTENING ─────────────────────────────────── -->
+      <div class="tips-section">
+        <div class="tips-section-header open" onclick="toggleTipsSection(this)">
+          <div class="tips-section-icon">🎧</div>
+          <div class="tips-section-title"><h3>Listening</h3><p>6 question types · Audio plays ONCE only · 40 questions</p></div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="tips-section-body open">
+
+          <!-- L1 Multiple Choice -->
+          <div class="strategy-card lcard open" id="sc-l1">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">L1</div>
+              <div class="strategy-title">Multiple Choice</div>
+              <div class="strategy-tag">MCQ</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body">
+              <div class="strategy-content">
+                <div class="what-box"><strong>What &amp; Why</strong>A question stem plus 3–4 options (A–C or A–D), or a "choose TWO" variant with 5+ options. Tests specific information, main ideas, speaker attitudes, and implied meanings. The recording almost never uses the exact words of the correct option — it paraphrases instead.</div>
+                <ul class="tips-list">
+                  <li><span class="tip-bullet">1</span>Read ALL questions during the 30-second pre-section pause. Underline the key concept in each stem so you know exactly what to listen for.</li>
+                  <li><span class="tip-bullet">2</span>Predict the topic of each option before the audio begins. This primes active listening rather than reactive scrambling.</li>
+                  <li><span class="tip-bullet">3</span>Listen for paraphrase, not word-match. Correct answers are almost always semantic equivalents of what the speaker says, not copies.</li>
+                  <li><span class="tip-bullet">4</span>Eliminate actively. Speakers deliberately mention all options — but contradict or correct two of them. Cross out eliminated options in real time.</li>
+                  <li><span class="tip-bullet">5</span>Watch for mid-sentence changes. "Let's do Tuesday — actually, Wednesday works better." The LAST statement is always correct.</li>
+                  <li><span class="tip-bullet">6</span>For "choose TWO" questions, treat each option as an independent yes/no decision. Don't look for a pre-set pair.</li>
+                  <li><span class="tip-bullet">7</span>Mark your best guess and move on immediately if you miss an answer. Hesitation causes you to miss the next question too.</li>
+                </ul>
+                <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Choosing the first option you hear that matches — distractors are placed early deliberately.</li><li>Picking based on a single keyword match rather than overall meaning.</li><li>Not reading ahead during section gaps, leaving yourself unprepared.</li></ul></div>
+                <div class="time-box">Use all 30 seconds before each section to read ALL questions for that section, not just the first. Transfer answers in the 10-minute period at the end — don't write on the answer sheet mid-listening.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- L2 Matching -->
+          <div class="strategy-card lcard" id="sc-l2">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">L2</div>
+              <div class="strategy-title">Matching</div>
+              <div class="strategy-tag">Match</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body">
+              <div class="strategy-content">
+                <div class="what-box"><strong>What &amp; Why</strong>A two-column task. Left column: a list of items (people, events, facilities). Right column: a bank of options. Some options can be reused; some may not be used at all. Common in Sections 3 &amp; 4.</div>
+                <ul class="tips-list">
+                  <li><span class="tip-bullet">1</span>Read BOTH columns in full during the pre-section pause. Understand what each bank option means — don't just memorise letters.</li>
+                  <li><span class="tip-bullet">2</span>Predict the type of information needed. If the bank contains adjectives (expensive, innovative), expect evaluative language in the recording.</li>
+                  <li><span class="tip-bullet">3</span>Left-column items follow audio order. Use this to pace yourself — you know roughly when each item will be addressed.</li>
+                  <li><span class="tip-bullet">4</span>Listen for contrast language: "Unlike X, Y is…", "The problem with… is…", "What makes this different is…"</li>
+                  <li><span class="tip-bullet">5</span>Don't commit too early. A speaker may initially mention one option then correct or expand with a different one.</li>
+                  <li><span class="tip-bullet">6</span>Check reuse rules. If the instructions say "you may use any letter more than once," the same bank option may correctly match multiple items.</li>
+                </ul>
+                <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Missing the instruction about whether options can be reused — this changes your entire approach.</li><li>Matching too quickly on a superficial keyword before the speaker finishes their point.</li><li>Ignoring options that seem unlikely — distractors are designed to seem plausible at first.</li></ul></div>
+                <div class="time-box">During the pre-section pause, scan both columns equally rather than reading any single item deeply. If torn between two options, jot both and decide during the 10-minute transfer.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- L3 Plan/Map/Diagram -->
+          <div class="strategy-card lcard" id="sc-l3">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">L3</div>
+              <div class="strategy-title">Plan / Map / Diagram Labelling</div>
+              <div class="strategy-tag">Visual</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body">
+              <div class="strategy-content">
+                <div class="what-box"><strong>What &amp; Why</strong>A visual image (floor plan, town map, technical diagram) with numbered blank labels. You write the correct word(s) or select a letter from a box based on what you hear. Requires connecting spoken language to spatial representations.</div>
+                <ul class="tips-list">
+                  <li><span class="tip-bullet">1</span>Spend 20–25 seconds of your pre-section time studying the image. Identify existing labels — these are your orientation anchors.</li>
+                  <li><span class="tip-bullet">2</span>Establish a sense of direction. Note compass points (N/S/E/W) or relative positions (left/right/opposite/adjacent).</li>
+                  <li><span class="tip-bullet">3</span>Underline existing labels on the map. The speaker will use these as reference points ("turn left at the fountain") — follow the route in real time.</li>
+                  <li><span class="tip-bullet">4</span>Write words exactly as spoken. Correct spelling is required. If you hear a proper noun (e.g. a room name), write it carefully.</li>
+                  <li><span class="tip-bullet">5</span>Follow audio sequence. Numbered items almost always appear in the order the speaker describes the space — don't skip ahead.</li>
+                  <li><span class="tip-bullet">6</span>For letter-matching variants, check all box options first, then eliminate as the recording progresses.</li>
+                </ul>
+                <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Losing your place on the map because you committed too much attention to writing one label.</li><li>Spelling errors on clearly pronounced words — these cost marks unnecessarily.</li><li>Confusing directional language: "to the left of the entrance" vs "on the left as you exit" are different.</li></ul></div>
+                <div class="time-box">If you miss a label, don't trace back — mentally move to the next numbered blank immediately. The investment of 20+ seconds studying the image before listening pays large dividends.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- L4 Form/Note/Table/Flow-chart -->
+          <div class="strategy-card lcard" id="sc-l4">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">L4</div>
+              <div class="strategy-title">Form / Note / Table / Flow-chart Completion</div>
+              <div class="strategy-tag">Fill</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body">
+              <div class="strategy-content">
+                <div class="what-box"><strong>What &amp; Why</strong>An organised visual (booking form, notes, table, flow-chart, or summary) with numbered blanks. You write words from the recording. Very common in Sections 1 &amp; 2. Word limit is strictly stated (e.g., NO MORE THAN TWO WORDS AND/OR A NUMBER).</div>
+                <ul class="tips-list">
+                  <li><span class="tip-bullet">1</span>Read the WHOLE task before the audio begins. Understand the context and predict the type of answer for each blank (name, number, date, adjective, noun phrase).</li>
+                  <li><span class="tip-bullet">2</span>Use existing text as a grammatical guide. Words around the blank tell you what type of word is needed (article before? plural needed?).</li>
+                  <li><span class="tip-bullet">3</span>Listen for paraphrase in the question, but copy answers word-for-word. The task text may paraphrase the recording, but your answer must use the speaker's exact words.</li>
+                  <li><span class="tip-bullet">4</span>Anticipate category-specific language. Forms: names, phone numbers, dates, prices. Flow-charts: sequence verbs and process nouns. Tables: comparisons.</li>
+                  <li><span class="tip-bullet">5</span>Numbers and dates are often spelled out in audio. "Two hundred and thirty-five" = 235. Decide whether to write digit or word based on context.</li>
+                  <li><span class="tip-bullet">6</span>Check word count before transferring. "The large conference room" is three words — if limit is ONE WORD, write only the most informative word.</li>
+                </ul>
+                <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Exceeding the word limit — this automatically loses the mark even if your answer is correct.</li><li>Mishearing similar-sounding numbers: "13" vs "30", "15" vs "50". Use context to verify.</li><li>Skipping ahead and losing track of your position when the audio moves faster than expected.</li></ul></div>
+                <div class="time-box">Section 1 is almost always this type and is the easiest section — use it to build confidence and bank easy marks. If you miss a blank, write your best guess and move forward.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- L5 Sentence Completion -->
+          <div class="strategy-card lcard" id="sc-l5">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">L5</div>
+              <div class="strategy-title">Sentence Completion</div>
+              <div class="strategy-tag">Sentence</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body">
+              <div class="strategy-content">
+                <div class="what-box"><strong>What &amp; Why</strong>5–10 standalone sentences, each with one or two numbered gaps. Sentences summarise key information from the recording. Unlike Summary Completion, each item is independent. You write exact words from the audio.</div>
+                <ul class="tips-list">
+                  <li><span class="tip-bullet">1</span>Read each FULL sentence during the pre-section pause. Understand the sentence's overall meaning — not just the words around the blank.</li>
+                  <li><span class="tip-bullet">2</span>Predict the grammatical category of the answer. "The _____ was reported" needs a noun. "They decided to _____" needs a verb infinitive.</li>
+                  <li><span class="tip-bullet">3</span>Use the sentence beginning as a locating tool. The stem will appear (possibly paraphrased) in the audio just before the answer is spoken.</li>
+                  <li><span class="tip-bullet">4</span>Write the exact word from the recording. Do not paraphrase or change tense. If the speaker says "extended," write "extended," not "prolonged."</li>
+                  <li><span class="tip-bullet">5</span>Check grammatical sense. If your completed sentence reads unnaturally, you likely have the wrong word.</li>
+                  <li><span class="tip-bullet">6</span>Maintain order awareness. Sentences follow audio order — use this to predict approximately when each answer arrives.</li>
+                </ul>
+                <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Changing word form (e.g. writing "organisation" when the grammatical slot needs "organised").</li><li>Writing too many words because you weren't tracking the stated limit.</li><li>Missing answers by fixating on an earlier sentence — always keep moving forward.</li></ul></div>
+                <div class="time-box">Allow roughly 30–40 seconds per question as a mental benchmark. Use the 10-minute transfer time to check the grammar fit of every completed sentence.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- L6 Short Answer -->
+          <div class="strategy-card lcard" id="sc-l6">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">L6</div>
+              <div class="strategy-title">Short-Answer Questions</div>
+              <div class="strategy-tag">Short</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body">
+              <div class="strategy-content">
+                <div class="what-box"><strong>What &amp; Why</strong>Wh-questions (who, what, where, when, why, how many) about specific factual details. Answers are 1–3 words and/or a number. Most common in Sections 1 &amp; 4. The question tells you exactly what type of detail to listen for.</div>
+                <ul class="tips-list">
+                  <li><span class="tip-bullet">1</span>Read all questions during the pre-section pause and underline the question word (what, where, how many). This defines your listening target.</li>
+                  <li><span class="tip-bullet">2</span>Convert the question into a listening focus. "What is the maximum weight?" → listen for a weight measurement.</li>
+                  <li><span class="tip-bullet">3</span>Listen for signal phrases that precede answers: "The limit is…", "You can find it at…", "The deadline is…"</li>
+                  <li><span class="tip-bullet">4</span>Write precise words from the recording. "What time does the tour begin?" + speaker says "half past nine" → write "9.30" or "half past nine."</li>
+                  <li><span class="tip-bullet">5</span>Stay ahead of the audio. After writing each answer, immediately shift attention to the NEXT question.</li>
+                  <li><span class="tip-bullet">6</span>Check spelling. Dates, numbers, and common nouns must be spelled correctly. Blank answers score zero — a guess might be right.</li>
+                </ul>
+                <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Writing a full sentence instead of the short noun-phrase answer — you never gain extra marks this way.</li><li>Spelling mistakes on simple words (dates, numbers, common objects).</li><li>Confusing similar-sounding numbers and dates in the recording.</li></ul></div>
+                <div class="time-box">Each question is answered in about 5–10 seconds of audio — pace is very fast. Stay continuously engaged. If you miss one, write your best guess and move on immediately.</div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /listening tips body -->
+      </div><!-- /listening tips section -->      <!-- ─── READING ─────────────────────────────────── -->
+      <div class="tips-section">
+        <div class="tips-section-header open" onclick="toggleTipsSection(this)">
+          <div class="tips-section-icon">📖</div>
+          <div class="tips-section-title"><h3>Reading</h3><p>11 question types · 3 passages · 60 min · Write directly on answer sheet</p></div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="tips-section-body open">
+
+          <!-- R1 Multiple Choice -->
+          <div class="strategy-card rcard open" id="sc-r1">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R1</div><div class="strategy-title">Multiple Choice</div><div class="strategy-tag">MCQ</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>A question or incomplete sentence with 3–4 options (A–D), or multi-answer variants (choose TWO from A–E). Tests detailed comprehension, main ideas, writer's purpose, and implied meanings. All four options are designed to sound plausible — only one is precisely supported by the text.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Read the question carefully and identify exactly what is asked: a detail, main idea, implication, or writer's attitude.</li>
+                <li><span class="tip-bullet">2</span>Locate the relevant passage section first, then evaluate options. Use key words from the question to scan for the right paragraph.</li>
+                <li><span class="tip-bullet">3</span>Read the relevant section THOROUGHLY — not just the sentence with the keyword, but 2–3 surrounding sentences for context.</li>
+                <li><span class="tip-bullet">4</span>Evaluate ALL options before selecting. The correct answer is precisely supported; distractors are too extreme, partially correct, or opposite in meaning.</li>
+                <li><span class="tip-bullet">5</span>Eliminate options that go beyond the text. Answers requiring external knowledge or unsupported inferences are always wrong.</li>
+                <li><span class="tip-bullet">6</span>Beware of extreme language (always, never, all, the only) in options — rarely correct unless the text uses the same absolute language.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Choosing based on familiarity — what "sounds right" from general knowledge rather than the text.</li><li>Not reading the full relevant section — an option may look right based on one sentence but be contradicted elsewhere.</li><li>Spending too long on this type — budget maximum 90 seconds per question.</li></ul></div>
+              <div class="time-box">Target no more than 90 seconds per question. If a question is consuming too much time, mark your best guess and move on — return at the end if time allows.</div>
+            </div></div>
+          </div>
+
+          <!-- R2 T/F/NG -->
+          <div class="strategy-card rcard" id="sc-r2">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R2</div><div class="strategy-title">Identifying Information (True / False / Not Given)</div><div class="strategy-tag">T/F/NG</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>Each statement is either TRUE (passage confirms it), FALSE (passage contradicts it), or NOT GIVEN (information is entirely absent). This type tests literal comprehension of factual information — NOT opinions. The difference between FALSE and NOT GIVEN is the most tested distinction.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Internalise the three definitions before your exam: TRUE = confirmed; FALSE = actively contradicted; NOT GIVEN = simply absent. Not finding something ≠ FALSE.</li>
+                <li><span class="tip-bullet">2</span>Locate the relevant section by scanning for key nouns or proper names from the statement.</li>
+                <li><span class="tip-bullet">3</span>Read that section carefully — compare the statement to the text word-by-word if necessary.</li>
+                <li><span class="tip-bullet">4</span>For NOT GIVEN: ask "Is this information anywhere in this passage?" Search twice before committing. Do NOT guess FALSE just because you can't find it.</li>
+                <li><span class="tip-bullet">5</span>Watch for partial matches — a statement may use a word from the text but describe a different relationship (cause vs. effect, more vs. fewer).</li>
+                <li><span class="tip-bullet">6</span>Statements follow text order — use this to move efficiently through the passage without re-reading entire sections.</li>
+                <li><span class="tip-bullet">7</span>Never use outside knowledge. Even if you know a fact to be true in reality, if the passage doesn't state it, the answer is NOT GIVEN.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Confusing FALSE and NOT GIVEN — the most common error in Reading. FALSE requires active contradiction; NOT GIVEN means total absence.</li><li>Reading too quickly and missing qualifiers (some, most, rarely) that change a statement's meaning.</li><li>Choosing TRUE based on partial evidence without verifying the FULL statement is supported.</li></ul></div>
+              <div class="time-box">Aim for 60–75 seconds per statement. NOT GIVEN is often the fastest to confirm — once you've scanned the passage twice without finding the information, commit and move on.</div>
+            </div></div>
+          </div>
+
+          <!-- R3 Y/N/NG -->
+          <div class="strategy-card rcard" id="sc-r3">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R3</div><div class="strategy-title">Identifying Writer's Views (Yes / No / Not Given)</div><div class="strategy-tag">Y/N/NG</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>Superficially similar to T/F/NG but fundamentally different: here you evaluate the WRITER'S OPINIONS, not facts. YES = writer's view agrees with the statement. NO = writer's view contradicts it. NOT GIVEN = writer doesn't express a view on this. The key skill is detecting the author's stance.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Switch your reading mode to "opinion-detection." Look for stance markers: "it is clear that…", "arguably…", "this suggests…", "critics fail to…", "the evidence indicates…"</li>
+                <li><span class="tip-bullet">2</span>Distinguish facts from views. "Carbon levels rose in 2005" is a fact. "This rise was entirely avoidable" is an opinion.</li>
+                <li><span class="tip-bullet">3</span>Locate the relevant section using key nouns from the statement, then read the FULL paragraph for context.</li>
+                <li><span class="tip-bullet">4</span>Ask two questions: (a) Does the writer address this topic? If no → NOT GIVEN. (b) Does the writer agree or disagree with the statement's claim? → YES or NO.</li>
+                <li><span class="tip-bullet">5</span>Watch for indirect disagreement. Writers often express NO by criticising, undermining, or questioning a position rather than explicitly rejecting it.</li>
+                <li><span class="tip-bullet">6</span>Pay attention to hedging language. Implied views may sometimes lean toward NOT GIVEN if the writer is non-committal.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Treating this like T/F/NG and looking for facts instead of opinions — leads to systematically wrong answers.</li><li>Projecting your own opinion or general knowledge onto the writer's position.</li><li>Choosing YES or NO based on fragments without reading the full argument context.</li></ul></div>
+              <div class="time-box">Budget 75–90 seconds per item — identifying opinions requires deeper reading than fact-finding. Read the passage introduction carefully first to understand the writer's overall stance.</div>
+            </div></div>
+          </div>
+
+          <!-- R4 Matching Information -->
+          <div class="strategy-card rcard" id="sc-r4">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R4</div><div class="strategy-title">Matching Information</div><div class="strategy-tag">Match</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>A list of pieces of information (facts, examples, explanations) must be matched to the correct paragraph (A, B, C…). Paragraphs can be used more than once; some may not be used at all. The task rewards efficient scanning, not linear reading.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Read ALL information items first before going to the passage — know what you're hunting for before you search.</li>
+                <li><span class="tip-bullet">2</span>Do NOT read the entire passage first. This task rewards scanning, not linear reading.</li>
+                <li><span class="tip-bullet">3</span>Scan each paragraph for the concept — not the exact wording. Items almost always paraphrase the passage.</li>
+                <li><span class="tip-bullet">4</span>Work item by item. Take one item, identify its key concept(s), scan the full passage, confirm by reading closely.</li>
+                <li><span class="tip-bullet">5</span>Know paragraph structure. Key examples appear mid-paragraph; main claims appear at the start or end.</li>
+                <li><span class="tip-bullet">6</span>Check if reuse is allowed — it is always explicitly stated in the instructions and it's intentional.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Matching based on a keyword alone without confirming the full meaning matches the item description.</li><li>Spending too long scanning — set a 2-minute limit per item and move on if stuck.</li><li>Assuming each paragraph is used exactly once — the task allows multiple uses.</li></ul></div>
+              <div class="time-box">This is one of the most time-consuming Reading types. Budget 2 minutes per item, max 12–14 minutes for a 6-item set. Do easier items (specific, findable information) first.</div>
+            </div></div>
+          </div>
+
+          <!-- R5 Matching Headings -->
+          <div class="strategy-card rcard" id="sc-r5">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R5</div><div class="strategy-title">Matching Headings</div><div class="strategy-tag">Headings</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>6–9 headings (i, ii, iii…) are given. Assign the most appropriate heading to each paragraph or section. Always more headings than paragraphs — some won't be used. Tests ability to identify the main idea of a paragraph, not supporting details.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Read ALL headings first before touching the passage. Understand each one and mentally group similar-sounding headings to distinguish them.</li>
+                <li><span class="tip-bullet">2</span>Eliminate clearly wrong headings after skimming each paragraph — narrows your choices rapidly.</li>
+                <li><span class="tip-bullet">3</span>Focus on the topic sentence (usually first or last sentence of each paragraph) — it typically captures the main idea the heading should match.</li>
+                <li><span class="tip-bullet">4</span>Match main ideas, not details. A heading must represent the paragraph's dominant point, not a supporting example mentioned within it.</li>
+                <li><span class="tip-bullet">5</span>Use process of elimination. After confidently matching 3–4 paragraphs, use remaining headings to narrow choices for harder ones.</li>
+                <li><span class="tip-bullet">6</span>Headings do NOT follow the order of the list. You may use heading vii before heading ii — order is irrelevant.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Matching based on a single word that appears in both heading and paragraph — the heading must capture the paragraph's full main idea.</li><li>Spending too long on one difficult paragraph — do easy matches first and return.</li><li>Reading the entire passage word-for-word before attempting — skimming is far more efficient.</li></ul></div>
+              <div class="time-box">Target 90 seconds per paragraph. If this task appears before the passage, do it first — understanding the paragraph structure helps all subsequent question types on that passage.</div>
+            </div></div>
+          </div>
+
+          <!-- R6 Matching Features -->
+          <div class="strategy-card rcard" id="sc-r6">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R6</div><div class="strategy-title">Matching Features</div><div class="strategy-tag">Features</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>Statements must be matched to features in a box (researchers, theories, dates, countries, organisations). Options can be reused. Tests ability to identify specific information attributed to particular sources — common in scientific or historical texts.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Read the features in the box first and understand what each represents (a person's name, a country, a theory label).</li>
+                <li><span class="tip-bullet">2</span>Read each statement and identify what attribute of the feature you need to match — their finding, their criticism, their location.</li>
+                <li><span class="tip-bullet">3</span>Build a mental map of where each feature appears in the passage. Scan for proper nouns and note which paragraphs mention each one.</li>
+                <li><span class="tip-bullet">4</span>Answers do NOT follow text order — statements may refer to features scattered throughout the passage.</li>
+                <li><span class="tip-bullet">5</span>Pay attention to attribution language: "According to Smith…", "Jones argued that…", "Unlike earlier theories, X proposed…"</li>
+                <li><span class="tip-bullet">6</span>Reuse is allowed and intentional — if the same researcher is mentioned for two different statements, both may correctly match to that researcher.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Assuming each feature is used only once — always check the instructions.</li><li>Scanning only for the feature name without reading surrounding context to verify the connection.</li><li>Confusing features with similar descriptions (two researchers sharing similar but distinct views).</li></ul></div>
+              <div class="time-box">Build a quick reference list (e.g. "Smith = paragraphs C, D; Jones = paragraph B") before answering — this saves time. Budget 90 seconds per statement.</div>
+            </div></div>
+          </div>
+
+          <!-- R7 Matching Sentence Endings -->
+          <div class="strategy-card rcard" id="sc-r7">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R7</div><div class="strategy-title">Matching Sentence Endings</div><div class="strategy-tag">Endings</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>Sentence stems are given in a numbered list. A separate box contains possible endings (A, B, C…) — always more endings than stems. Match each stem to its correct ending to form an accurate, complete sentence. Both grammatical sense AND semantic accuracy are required.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Read ALL stems AND all endings before going to the passage. Understand what each full combination would mean.</li>
+                <li><span class="tip-bullet">2</span>Predict possible completions for each stem before looking at options — reduces the influence of distractors.</li>
+                <li><span class="tip-bullet">3</span>Stems follow text order — use this to scan the passage efficiently from section to section.</li>
+                <li><span class="tip-bullet">4</span>Ensure BOTH grammatical coherence AND semantic accuracy. The completed sentence must make grammatical sense AND accurately reflect the passage.</li>
+                <li><span class="tip-bullet">5</span>Use elimination actively. Some endings can be ruled out for certain stems based on grammar alone (e.g., a stem ending in "are" needs a plural noun).</li>
+                <li><span class="tip-bullet">6</span>Having unused endings is normal — don't panic if one is left over; it confirms you've matched correctly elsewhere.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Forcing a grammatical match without verifying the semantic accuracy against the passage.</li><li>Choosing endings that are partly correct — the ENTIRE completed sentence must be fully supported by the text.</li><li>Not doing your easiest matches first — eliminate obvious endings to simplify remaining choices.</li></ul></div>
+              <div class="time-box">Budget 90 seconds per stem. Do confident matches first — eliminating used endings simplifies the remaining choices significantly.</div>
+            </div></div>
+          </div>
+
+          <!-- R8 Sentence Completion -->
+          <div class="strategy-card rcard" id="sc-r8">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R8</div><div class="strategy-title">Sentence Completion</div><div class="strategy-tag">Sentence</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>Incomplete sentences with one or two gaps. Fill each gap with words taken DIRECTLY from the passage. Unlike the listening version, you can re-read as needed. Word limits apply (usually NO MORE THAN TWO WORDS). The task text typically paraphrases the passage, but your answer uses the passage's exact words.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Read the full incomplete sentence to understand its meaning before searching the passage.</li>
+                <li><span class="tip-bullet">2</span>Identify the grammatical requirement of the gap. Surrounding words constrain the answer type (noun, adjective, verb, adverb).</li>
+                <li><span class="tip-bullet">3</span>Scan the passage for paraphrased language from the sentence stem — your answer uses the passage's exact words, not your own.</li>
+                <li><span class="tip-bullet">4</span>Copy the answer WORD-FOR-WORD from the passage. Paraphrasing costs you the mark.</li>
+                <li><span class="tip-bullet">5</span>Count words carefully. Articles (a, an, the) and prepositions count as words.</li>
+                <li><span class="tip-bullet">6</span>Verify the completed sentence is grammatically correct — if it reads unnaturally, re-read the passage section with your proposed answer inserted.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Changing word form (e.g. "significant" → "significantly") — use the exact form from the passage.</li><li>Writing more words than the limit — even if the extra word is correct, you lose the mark.</li><li>Choosing words nearby in the passage that don't specifically answer the gap.</li></ul></div>
+              <div class="time-box">Sentences follow text order — use this to move efficiently. Budget 60–75 seconds per gap. Generally faster than inference-based tasks.</div>
+            </div></div>
+          </div>
+
+          <!-- R9 Summary/Note/Table/Flow-chart Completion -->
+          <div class="strategy-card rcard" id="sc-r9">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R9</div><div class="strategy-title">Summary / Note / Table / Flow-chart Completion</div><div class="strategy-tag">Fill</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>A condensed version of part of the passage — as prose summary, notes, table, or flow-chart — contains numbered gaps. Candidates either select words from a given word bank or extract directly from the passage. Tests identification of main points and supporting details across a passage section.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Identify which section of the passage the summary relates to before reading it in detail — the title or introductory line usually tells you. This narrows your search zone dramatically.</li>
+                <li><span class="tip-bullet">2</span>For word-bank variants, read all options first and eliminate obviously wrong ones before scanning the passage.</li>
+                <li><span class="tip-bullet">3</span>For passage-extraction variants, use surrounding words as syntactic clues to identify the word type needed.</li>
+                <li><span class="tip-bullet">4</span>Read the passage section carefully — summaries are paraphrased, so your job is to decode the paraphrase and find the original word(s).</li>
+                <li><span class="tip-bullet">5</span>Do not use words from outside the passage (or outside the box for word-bank variants). Even if you "know" what belongs there, use only what is provided.</li>
+                <li><span class="tip-bullet">6</span>Check logical coherence — the completed summary should read as a coherent, accurate account of the passage section.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Using your own words when extraction from the passage is required — always loses the mark.</li><li>Missing the word limit — even with a word bank, the gap may only accommodate ONE word.</li><li>Failing to read the full summary first — without context, choices are essentially random.</li></ul></div>
+              <div class="time-box">Invest 30 seconds locating the relevant passage section before answering — then 60–75 seconds per gap. Finding the right section quickly is the key time-saving move.</div>
+            </div></div>
+          </div>
+
+          <!-- R10 Diagram Label Completion -->
+          <div class="strategy-card rcard" id="sc-r10">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R10</div><div class="strategy-title">Diagram Label Completion</div><div class="strategy-tag">Diagram</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>A diagram, cross-section, illustration, or technical drawing with numbered blank labels. Fill each blank with word(s) from the passage. Often describes a physical object, biological structure, or technical process. Requires close, precise reading of the relevant passage section.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Study the diagram carefully BEFORE finding the passage section. Understand what the image depicts and what existing labels tell you.</li>
+                <li><span class="tip-bullet">2</span>Identify which passage paragraph describes this diagram — signalled by explicit references ("Figure 1," "as illustrated below") or descriptions of the same object.</li>
+                <li><span class="tip-bullet">3</span>Read that passage section THOROUGHLY — this task requires close reading because spatial/structural descriptions need precise comprehension.</li>
+                <li><span class="tip-bullet">4</span>Match each numbered blank's position to the diagram part it refers to, then find the relevant word in the passage.</li>
+                <li><span class="tip-bullet">5</span>Use existing labels as anchors — if one part is already labelled "valve," find "valve" in the passage and read around it to find adjacent labels.</li>
+                <li><span class="tip-bullet">6</span>Write exact words from the passage — word form and spelling must be precise.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Labelling the wrong part because you misread the diagram structure (confusing "top" with "bottom" in a cross-section).</li><li>Using a general noun instead of the specific technical term used in the passage.</li><li>Exceeding the word limit — most commonly ONE or TWO WORDS only.</li></ul></div>
+              <div class="time-box">Budget 90 seconds per label. Spend 30 seconds locating the relevant passage section quickly — the rest goes to reading and extraction.</div>
+            </div></div>
+          </div>
+
+          <!-- R11 Short-Answer Questions -->
+          <div class="strategy-card rcard" id="sc-r11">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">R11</div><div class="strategy-title">Short-Answer Questions</div><div class="strategy-tag">Short</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>Wh-questions (what, where, who, when, how many) about specific factual details in the passage. Answers are brief — 1–3 words and/or a number, extracted directly from the text. Questions follow text order. The text is in front of you — spelling errors are inexcusable.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Read each question and identify exactly what type of information is sought — a name, a number, a place, a date, a single-word reason.</li>
+                <li><span class="tip-bullet">2</span>Underline the key noun or concept and use it to locate the relevant passage section.</li>
+                <li><span class="tip-bullet">3</span>Read that section carefully — short answers require precise extraction, not generalisation.</li>
+                <li><span class="tip-bullet">4</span>Write the exact word(s) from the passage. "What material is used?" → write "aluminium," not "it is made of aluminium."</li>
+                <li><span class="tip-bullet">5</span>Check that your answer grammatically answers the question. "When did…?" needs a date/time; "Who…?" needs a name or noun phrase.</li>
+                <li><span class="tip-bullet">6</span>Questions follow text order — pace yourself through the passage accordingly.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Writing full sentences instead of the short answer — often causes word limit violations with zero extra benefit.</li><li>Spelling errors on words copied directly from the passage — the text is right in front of you.</li><li>Using a related but incorrect nearby word — re-read the sentence to confirm the exact answer.</li></ul></div>
+              <div class="time-box">This is typically the fastest Reading type. Target 45–60 seconds per question. Useful for recovering time if earlier types took longer than planned.</div>
+            </div></div>
+          </div>
+
+        </div><!-- /reading tips body -->
+      </div><!-- /reading tips section -->      <!-- ─── WRITING ─────────────────────────────────── -->
+      <div class="tips-section">
+        <div class="tips-section-header open" onclick="toggleTipsSection(this)">
+          <div class="tips-section-icon">✍️</div>
+          <div class="tips-section-title"><h3>Writing</h3><p>8 task types · 60 min total · Graded on 4 criteria equally</p></div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="tips-section-body open">
+
+          <!-- W1 Graph/Chart/Table -->
+          <div class="strategy-card wcard open" id="sc-w1">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">W1</div><div class="strategy-title">Task 1: Graph / Chart / Table Description</div><div class="strategy-tag">Task 1</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>One or more graphs (line, bar, column), charts (pie), or tables with statistical data. Write a factual, objective description of key features, trends, and comparisons. No opinions. No explanations of WHY trends occurred. Minimum 150 words. Scored on: Task Achievement, Coherence &amp; Cohesion, Lexical Resource, Grammatical Range &amp; Accuracy.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Spend 2–3 minutes analysing the visual before writing. Identify: the main trend(s), highest/lowest values, exceptions, and key comparisons.</li>
+                <li><span class="tip-bullet">2</span>Write a paraphrased introduction (1–2 sentences). NEVER copy the prompt verbatim. Rephrase: "The graph shows…" → "The line graph illustrates the changes in…"</li>
+                <li><span class="tip-bullet">3</span>Write an overview paragraph (2–3 sentences). THIS IS THE MOST IMPORTANT PARAGRAPH. Describe the most significant general trends WITHOUT specific figures. Think: what would a reader need to know before looking at the data?</li>
+                <li><span class="tip-bullet">4</span>Write 1–2 detail paragraphs grouping data logically (by category, time period, or rank). Include specific data to support each point: "rose sharply from 20% to 65% between 2010 and 2020."</li>
+                <li><span class="tip-bullet">5</span>Use varied trend vocabulary: increased dramatically, fell steadily, remained relatively stable, reached a peak of, dropped to a low of, fluctuated, plateaued at, accounted for X%.</li>
+                <li><span class="tip-bullet">6</span>Never write a conclusion — this is a description, not an essay. End after your last detail point.</li>
+                <li><span class="tip-bullet">7</span>Select the most significant data — you don't need every single figure. Examiners want to see you can identify what matters.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Omitting the overview — the most penalised omission in Task 1. Without it, Task Achievement is capped below Band 6.</li><li>Describing every single figure without selection — reads as a catalogue, not a description.</li><li>Including opinions or reasons ("I think this is because globalisation caused…") — Task 1 requires purely objective description.</li></ul></div>
+              <div class="time-box">20 minutes total: 2–3 min analysis → 1 min planning structure → 14–15 min writing → 2 min proofreading. Aim for 165–185 words. Going significantly over wastes time better spent on Task 2.</div>
+            </div></div>
+          </div>
+
+          <!-- W2 Process Diagram -->
+          <div class="strategy-card wcard" id="sc-w2">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">W2</div><div class="strategy-title">Task 1: Process Diagram Description</div><div class="strategy-tag">Task 1</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>A diagram showing a sequence of steps — natural (water cycle, life cycle) or man-made (manufacturing, water treatment) — with arrows connecting stages. No statistics or numbers. You describe all stages from start to finish in a logical sequence. EVERY stage must be covered.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Study the diagram systematically: identify the start point, end point, number of stages, and any loops, feedback cycles, or branches.</li>
+                <li><span class="tip-bullet">2</span>Write a paraphrased introduction: "The diagram illustrates the process by which [X is produced / X occurs], consisting of [N] main stages."</li>
+                <li><span class="tip-bullet">3</span>Write an overview: state whether the process is cyclical or linear, and approximately how many stages it involves.</li>
+                <li><span class="tip-bullet">4</span>Describe each stage in sequence using sequencing language: firstly, then, subsequently, following this, at this point, the next stage involves, finally, once [X] has occurred.</li>
+                <li><span class="tip-bullet">5</span>Use passive voice for man-made processes: "The raw materials are heated to 400°C before being filtered." Passive is natural and expected here.</li>
+                <li><span class="tip-bullet">6</span>Cover EVERY stage — unlike data tasks, you cannot select and omit. Examiners check all steps are covered.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Treating it like a data task and looking for trends — there are none. Describe stages and relationships only.</li><li>Writing in the wrong tense — use simple present (or past for historical processes). Avoid future tense.</li><li>Omitting stages — examiners explicitly check that the full process is covered.</li></ul></div>
+              <div class="time-box">20 minutes total: 2 min tracing the process end-to-end → 1 min planning → 15 min writing → 2 min review. Process diagrams rarely justify going over 200 words — precision is more valued than length.</div>
+            </div></div>
+          </div>
+
+          <!-- W3 Map -->
+          <div class="strategy-card wcard" id="sc-w3">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">W3</div><div class="strategy-title">Task 1: Map Description</div><div class="strategy-tag">Task 1</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>Two maps of the same location at different times (e.g. 1980 and 2020), or a plan showing proposed changes. Describe what has changed, what remains the same, and the nature of any transformation. Requires precise spatial language and change vocabulary.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Annotate both maps before writing. Categorise every feature as: New (Map 2 only), Demolished (Map 1 only), Retained (both maps), or Modified (changed position/label).</li>
+                <li><span class="tip-bullet">2</span>Write a paraphrased introduction: "The maps compare the layout of [place] in [year] and [year]."</li>
+                <li><span class="tip-bullet">3</span>Write an overview summarising the most significant overall change: "Overall, the area underwent significant development, with residential housing largely replaced by commercial buildings."</li>
+                <li><span class="tip-bullet">4</span>Organise body paragraphs by zone/area (northern area, town centre, outskirts) rather than listing individual features — creates better coherence.</li>
+                <li><span class="tip-bullet">5</span>Use precise spatial language: in the north/south/east/west, to the left/right of, adjacent to, opposite, in the centre of, where X once stood, replaced by, expanded to include.</li>
+                <li><span class="tip-bullet">6</span>Use change vocabulary: was demolished, was replaced by, was constructed, remained unchanged, was extended, a new X was built, was relocated to.</li>
+                <li><span class="tip-bullet">7</span>Describe continuity too — things that stayed the same are important and earn marks for completeness.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Listing every single feature without grouping or prioritising — reads as a catalogue, not a description.</li><li>Using vague language like "some things changed" — be specific about which features changed and how.</li><li>Forgetting to describe continuity — features that remained unchanged must be noted.</li></ul></div>
+              <div class="time-box">20 minutes total: 3 min annotating both maps → 1 min planning → 14 min writing → 2 min proofreading. Aim for 160–185 words.</div>
+            </div></div>
+          </div>
+
+          <!-- W4 Opinion Essay -->
+          <div class="strategy-card wcard" id="sc-w4">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">W4</div><div class="strategy-title">Task 2: Opinion Essay (Agree / Disagree)</div><div class="strategy-tag">Task 2</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>A statement expressing a point of view followed by "To what extent do you agree or disagree?" You must express a clear personal position and defend it. This is the most common Task 2 type. The examiner expects a clear, consistent stance supported by well-developed arguments — NOT a fence-sitting summary of both sides.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Decide your position BEFORE writing — fully agree, partially agree, or fully disagree. Do NOT change position mid-essay. Partial agreement (conceding one point while disagreeing overall) is valid and demonstrates sophistication.</li>
+                <li><span class="tip-bullet">2</span>Plan your structure (5 min): Introduction (paraphrase + clear thesis) → Body 1 (main argument + development + example) → Body 2 (second argument OR counter-argument with rebuttal) → Conclusion (restate position + summary).</li>
+                <li><span class="tip-bullet">3</span>Develop each body paragraph fully. A strong paragraph has: a topic sentence → 2–3 sentences of explanation/reasoning → a concrete example. Shallow paragraphs score poorly.</li>
+                <li><span class="tip-bullet">4</span>Use hedging language if partially agreeing: "admittedly," "it must be acknowledged that," "while it is true that X, the reality is that Y."</li>
+                <li><span class="tip-bullet">5</span>Avoid listing. The depth of ONE well-developed argument beats the breadth of FIVE undeveloped bullet points every time.</li>
+                <li><span class="tip-bullet">6</span>Write a strong conclusion. Restate your position using different vocabulary — don't just copy your introduction.</li>
+                <li><span class="tip-bullet">7</span>Never say "I agree to some extent" and then discuss both sides equally — that is a discussion essay, not an opinion essay.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Changing your position mid-essay — this catastrophically damages Task Response.</li><li>Writing a balanced discussion instead of taking a clear stance — this misidentifies the task type.</li><li>Under-developing body paragraphs with only 2–3 sentences of assertions — examiners want reasoning and examples.</li></ul></div>
+              <div class="time-box">40 minutes total: 5 min planning → 30 min writing → 5 min proofreading. Aim for 270–300 words. Writing more than 320 words rarely improves your score and uses time needed for proofreading.</div>
+            </div></div>
+          </div>
+
+          <!-- W5 Discussion Essay -->
+          <div class="strategy-card wcard" id="sc-w5">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">W5</div><div class="strategy-title">Task 2: Discussion Essay (Both Sides + Opinion)</div><div class="strategy-tag">Task 2</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>Prompt usually reads: "Discuss both views and give your own opinion." You must present BOTH sides of an argument AND give your own position. Different from Opinion Essay — you are expected to genuinely explore both perspectives before concluding. Common structure: Intro → Body 1 (View A) → Body 2 (View B) → Conclusion (your opinion).</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Identify the two views in the prompt BEFORE planning. Confirm you understand what "both sides" means for this specific topic.</li>
+                <li><span class="tip-bullet">2</span>Give approximately equal coverage to both views in your body paragraphs — balance demonstrates objectivity.</li>
+                <li><span class="tip-bullet">3</span>Your opinion MUST appear — typically in the introduction (briefly) AND the conclusion (fully developed). Do not hide or omit it.</li>
+                <li><span class="tip-bullet">4</span>Use contrast and concession language: "While proponents of X argue that…, those on the other side contend that…"</li>
+                <li><span class="tip-bullet">5</span>Develop each body paragraph with a topic sentence, reasoning, and a supporting example — don't list points superficially.</li>
+                <li><span class="tip-bullet">6</span>In the conclusion, clearly state YOUR view and briefly explain why it outweighs the opposing view.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Omitting your own opinion — the prompt explicitly asks for it; omitting it caps Task Response.</li><li>Writing only one body paragraph covering both views — this is rushed and underdeveloped.</li><li>Treating it as a pure Opinion Essay and ignoring the opposing view — this misidentifies the task type.</li></ul></div>
+              <div class="time-box">40 minutes total: 5 min planning → 30 min writing → 5 min proofreading. A four-paragraph structure (Intro + 2 Body + Conclusion) is ideal. Aim for 270–300 words.</div>
+            </div></div>
+          </div>
+
+          <!-- W6 Problem & Solution -->
+          <div class="strategy-card wcard" id="sc-w6">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">W6</div><div class="strategy-title">Task 2: Problem &amp; Solution Essay</div><div class="strategy-tag">Task 2</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>Common prompt: "What are the problems associated with this? What solutions can you suggest?" Or: "What are the causes of this problem and what measures could be taken to address them?" Write a minimum 250-word essay identifying problems/causes and proposing realistic, specific solutions/measures.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Read the prompt carefully to confirm whether it asks for problems + solutions, causes + solutions, or causes + effects. These are different tasks.</li>
+                <li><span class="tip-bullet">2</span>Structure: Introduction (paraphrase topic + brief overview) → Body 1 (Problems/Causes — 2 developed examples) → Body 2 (Solutions/Measures — directly matched to problems) → Conclusion.</li>
+                <li><span class="tip-bullet">3</span>Match solutions directly to problems. If you identify "lack of funding" as a problem, your solution should address "how to increase funding" — not a generic point.</li>
+                <li><span class="tip-bullet">4</span>Make solutions specific and realistic. "The government should invest in education" is too vague. "Governments could allocate a higher percentage of GDP — such as 6% — to public schooling" is specific and credible.</li>
+                <li><span class="tip-bullet">5</span>Choose 2 problems and 2 solutions — depth of development matters more than breadth. Avoid listing 5+ underdeveloped points.</li>
+                <li><span class="tip-bullet">6</span>Use appropriate vocabulary: "One of the most pressing issues is…", "A key solution would be to…", "This measure would effectively address the problem of…"</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Misidentifying the task type — confusing "causes and effects" with "problems and solutions" leads to off-topic responses.</li><li>Proposing solutions that don't match the problems raised — creates an incoherent essay.</li><li>Being too vague — "the government should do something" is not a solution; it's an evasion.</li></ul></div>
+              <div class="time-box">40 minutes total: 5 min planning → 30 min writing → 5 min proofreading. Plan your body paragraphs explicitly before writing — the problem-solution connection must be logical and traceable.</div>
+            </div></div>
+          </div>
+
+          <!-- W7 Advantages & Disadvantages -->
+          <div class="strategy-card wcard" id="sc-w7">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">W7</div><div class="strategy-title">Task 2: Advantages &amp; Disadvantages Essay</div><div class="strategy-tag">Task 2</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>Two variants exist: (1) "Discuss the advantages and disadvantages" — no opinion required; (2) "Do the advantages outweigh the disadvantages?" — your opinion IS required. Read the prompt very carefully to know which variant you have. Structure: Intro → Body 1 (advantages) → Body 2 (disadvantages) → Conclusion.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Read the prompt twice to confirm: does it ask you to DISCUSS advantages and disadvantages (no opinion), or does it ask you to EVALUATE which outweighs the other (opinion required)?</li>
+                <li><span class="tip-bullet">2</span>For "outweigh" variants, state your position clearly in the introduction and reinforce it in the conclusion.</li>
+                <li><span class="tip-bullet">3</span>Give broadly equal coverage to both advantages and disadvantages — don't write 80% on one side and 20% on the other.</li>
+                <li><span class="tip-bullet">4</span>Develop 1–2 advantages and 1–2 disadvantages in depth, with reasoning and examples for each point.</li>
+                <li><span class="tip-bullet">5</span>Use evaluative vocabulary: "A significant benefit of this is…", "A major drawback, however, is…", "This outweighs the disadvantage because…"</li>
+                <li><span class="tip-bullet">6</span>In the conclusion, summarise both sides and (if required) clearly state which outweighs the other and why.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Giving an opinion when none is requested — or failing to give one when it IS requested. Read the prompt.</li><li>Heavily biasing one side — even in "outweigh" variants, you must develop both sides, just conclude one is stronger.</li><li>Listing advantages/disadvantages without development — "It saves time. It saves money. It saves effort." is a list, not an essay.</li></ul></div>
+              <div class="time-box">40 minutes total: 5 min planning → 30 min writing → 5 min proofreading. The prompt variant (discuss vs. outweigh) changes your thesis — identify it first or risk writing the wrong essay.</div>
+            </div></div>
+          </div>
+
+          <!-- W8 Double Question -->
+          <div class="strategy-card wcard" id="sc-w8">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">W8</div><div class="strategy-title">Task 2: Double Question Essay</div><div class="strategy-tag">Task 2</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>The prompt contains TWO explicit, separate questions (e.g., "Why is this happening? Is this a positive or negative development?" or "What are the effects of this? What can individuals do to address it?"). BOTH questions must be answered with equal weight or marks will be lost for partially addressing the task.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Identify BOTH questions in the prompt and write them down before planning. It sounds obvious, but many students miss the second question under exam pressure.</li>
+                <li><span class="tip-bullet">2</span>Structure: Introduction (paraphrase + brief answer to both questions) → Body 1 (answering Question 1 fully) → Body 2 (answering Question 2 fully) → Conclusion.</li>
+                <li><span class="tip-bullet">3</span>Give roughly equal word count to each question. If Body 1 is 120 words, Body 2 should be approximately 120 words too.</li>
+                <li><span class="tip-bullet">4</span>Don't blend the two questions together in one body paragraph — keep them clearly separated for coherence and clarity.</li>
+                <li><span class="tip-bullet">5</span>In the conclusion, briefly revisit BOTH questions — don't just summarise the second one.</li>
+                <li><span class="tip-bullet">6</span>Use clear signposting: "Regarding the first question…", "Turning to the second issue…", "In terms of [Q1]… As for [Q2]…"</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Only answering one of the two questions — this is extremely common and caps Task Response at Band 5 maximum.</li><li>Spending 80% of the essay on one question and barely touching the other.</li><li>Blending both answers into one muddled body paragraph — each question deserves its own, clearly structured paragraph.</li></ul></div>
+              <div class="time-box">40 minutes total: 5 min planning (identify BOTH questions explicitly) → 30 min writing → 5 min proofreading. Before submitting, re-read the prompt and confirm both questions are answered.</div>
+            </div></div>
+          </div>
+
+        </div><!-- /writing tips body -->
+      </div><!-- /writing tips section -->      <!-- ─── SPEAKING ─────────────────────────────────── -->
+      <div class="tips-section">
+        <div class="tips-section-header open" onclick="toggleTipsSection(this)">
+          <div class="tips-section-icon">🗣️</div>
+          <div class="tips-section-title"><h3>Speaking</h3><p>3 parts · 11–14 min · Graded on 4 criteria: Fluency, Lexis, Grammar, Pronunciation</p></div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="tips-section-body open">
+
+          <!-- S1 Part 1 Interview -->
+          <div class="strategy-card scard open" id="sc-s1">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">S1</div><div class="strategy-title">Part 1 — Interview / Personal Questions</div><div class="strategy-tag">Part 1</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>4–5 minutes. The examiner asks 4–6 questions on 2–3 familiar topics (home, work/study, hobbies, food, transport, weather, technology). Questions are straightforward and personal. Responses should be conversational and natural — not a formal speech. Aim for 2–4 sentences per answer.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Use the D-E-E-P formula: Direct answer → Explain it → Example or Extension → Personal feeling. "I enjoy cooking. It's a great way to relax after work. I especially love making Italian dishes. I find the process very meditative."</li>
+                <li><span class="tip-bullet">2</span>Answer naturally, not formulaically. Don't start every answer with "That's a very interesting question" — examiners penalise rehearsed-sounding openers.</li>
+                <li><span class="tip-bullet">3</span>Avoid one-word answers ("Yes" / "No") — always develop. But don't over-talk either. 2–4 sentences is ideal per question in Part 1.</li>
+                <li><span class="tip-bullet">4</span>Use a range of tenses naturally. Part 1 questions about habits use present tense; questions about childhood use past tense. Don't force complex structures unnaturally.</li>
+                <li><span class="tip-bullet">5</span>Don't memorise scripts. Examiners can tell. Instead, practise talking fluently about familiar topics until it feels natural.</li>
+                <li><span class="tip-bullet">6</span>Maintain a conversational pace. Don't rush. Use natural pausing. A brief "Hmm, let me think…" is acceptable and human — it's not penalised.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Under-answering (one sentence only) — this doesn't give the examiner enough language to assess.</li><li>Over-preparing scripted answers that sound unnatural and robotic.</li><li>Speaking too fast due to nervousness — slowing down actually improves fluency scores.</li></ul></div>
+              <div class="time-box">Part 1 lasts 4–5 minutes. You have no prep time — it starts immediately. Treat it as warming up your voice and confidence. The examiner is looking for natural, spontaneous English, not perfection.</div>
+            </div></div>
+          </div>
+
+          <!-- S2 Part 2 Cue Card -->
+          <div class="strategy-card scard" id="sc-s2">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">S2</div><div class="strategy-title">Part 2 — Individual Long Turn (Cue Card)</div><div class="strategy-tag">Part 2</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>You receive a cue card with a topic and 3–4 bullet points (e.g., "Describe a person who inspired you. You should say: who this person is, how you know them, what they have done, and explain why they inspired you."). You have exactly 1 minute to prepare notes. Then speak for 1–2 minutes uninterrupted. The examiner will stop you at 2 minutes.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Use your 1-minute preparation time effectively. Write 3–5 word bullet-point notes for each cue card point — not full sentences. You speak from notes, not a script.</li>
+                <li><span class="tip-bullet">2</span>Cover ALL bullet points on the cue card. Examiners check that you address all listed aspects.</li>
+                <li><span class="tip-bullet">3</span>Structure your talk: brief introduction → address each bullet point → brief conclusion/reflection. Use signpost phrases: "So let me start by telling you about…", "Moving on to…", "And finally, the reason this person inspired me is…"</li>
+                <li><span class="tip-bullet">4</span>Aim to speak for the full 2 minutes. If you stop early (e.g. at 45 seconds), your score suffers. The examiner will let you know when time is up.</li>
+                <li><span class="tip-bullet">5</span>Use a variety of tenses. Cue cards about past events need past tense; you can add present reflection ("This experience has taught me that…") and hypothetical language ("If I could meet this person again, I would…").</li>
+                <li><span class="tip-bullet">6</span>Use vivid details and specific language. "A tall man with a warm smile who always arrived early to class" is far more impressive than "a good teacher."</li>
+                <li><span class="tip-bullet">7</span>Don't panic if you run out of ideas on a bullet point — circle back to a previous point with "And another thing I should mention about this is…"</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Speaking for less than 1 minute — the minimum acceptable length is about 1 minute 30 seconds.</li><li>Writing full sentences during prep time instead of quick notes — you won't have time to read them.</li><li>Ignoring one or more of the cue card bullet points — all must be addressed.</li></ul></div>
+              <div class="time-box">1 minute prep is short. Decide immediately what person/place/event you'll talk about and jot quick notes per bullet point. Don't change your topic during preparation — you won't have time to re-plan.</div>
+            </div></div>
+          </div>
+
+          <!-- S3 Part 3 Discussion -->
+          <div class="strategy-card scard" id="sc-s3">
+            <div class="strategy-header" onclick="toggleCard(this)">
+              <div class="strategy-num">S3</div><div class="strategy-title">Part 3 — Two-Way Discussion</div><div class="strategy-tag">Part 3</div>
+              <svg class="strategy-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="strategy-body"><div class="strategy-content">
+              <div class="what-box"><strong>What &amp; Why</strong>4–5 minutes. A two-way conversation with the examiner on abstract, thematic topics linked to your Part 2 topic. Questions become more complex: "Why do you think…?", "Do you think society should…?", "How has this changed compared to the past?", "What might happen in the future if…?" This part tests higher-order thinking and sophisticated language use.</div>
+              <ul class="tips-list">
+                <li><span class="tip-bullet">1</span>Give extended answers — aim for 4–6 sentences per response. This is not Part 1. Part 3 expects depth, analysis, and reasoning, not brief conversational answers.</li>
+                <li><span class="tip-bullet">2</span>Use the P-E-E structure: Point → Evidence/Example → Elaboration/Why. "I think technology has generally improved education. For instance, students in remote areas can now access world-class university lectures online for free. This has democratised knowledge in a way that was simply unimaginable twenty years ago."</li>
+                <li><span class="tip-bullet">3</span>Use speculative and analytical language: "It could be argued that…", "One possible explanation is…", "There's a strong case to be made for…", "From an economic perspective…", "In the long term, this might lead to…"</li>
+                <li><span class="tip-bullet">4</span>If you need thinking time, use natural delay strategies: "That's a thought-provoking question. Let me consider…", "I haven't thought about that before, but I'd say…" Avoid silence or "um, um, um."</li>
+                <li><span class="tip-bullet">5</span>Be willing to change your position or add nuance: "While I initially thought X, I can also see that Y has merit because…" This demonstrates sophisticated thinking.</li>
+                <li><span class="tip-bullet">6</span>Use a range of complex grammatical structures: conditionals ("If governments were to invest more in…"), passive constructions, relative clauses, and perfect tenses.</li>
+                <li><span class="tip-bullet">7</span>Don't just agree with everything. The examiner may challenge your view — maintain your position confidently or concede gracefully with reasoning.</li>
+              </ul>
+              <div class="mistakes-box"><strong>Common Mistakes</strong><ul><li>Giving Part 1-length answers (1–2 sentences) — Part 3 requires depth and analysis, not brief replies.</li><li>Saying "I don't know" and stopping — always follow up with "but I suppose…" or "I imagine that…"</li><li>Avoiding all complex vocabulary — Part 3 is your main opportunity to demonstrate sophisticated lexical resource.</li></ul></div>
+              <div class="time-box">Part 3 is the highest-scoring opportunity in the Speaking test. The examiner expects you to lead the discussion with extended, analytical responses. Think of it as a mini academic debate — your fluency, vocabulary, and grammar complexity are all on full display.</div>
+            </div></div>
+          </div>
+
+        </div><!-- /speaking tips body -->
+      </div><!-- /speaking tips section -->
+
+    </div><!-- /panel-tips -->
+
+    <footer><p>IELTS Academic Question Type Masterguide &nbsp;·&nbsp; All 28 types covered &nbsp;·&nbsp; Built for Band 7+ preparation</p></footer>
+
+  </div><!-- /container -->
+
+  <script>
+    /* ── STATE ──────────────────────────────────────────────── */
+    const SECTIONS = {
+      listening: { bar: 'l-bar', pct: 'l-pct', label: 'l-count-label', chip: 'chip-l-label', name: 'Listening', btn: 'l-toggle-btn' },
+      reading:   { bar: 'r-bar', pct: 'r-pct', label: 'r-count-label', chip: 'chip-r-label', name: 'Reading',   btn: 'r-toggle-btn' },
+      writing:   { bar: 'w-bar', pct: 'w-pct', label: 'w-count-label', chip: 'chip-w-label', name: 'Writing',   btn: 'w-toggle-btn' },
+      speaking:  { bar: 's-bar', pct: 's-pct', label: 's-count-label', chip: 'chip-s-label', name: 'Speaking',  btn: 's-toggle-btn' },
+    };
+    const circumference = 2 * Math.PI * 40;
+
+    /* ── TABS ────────────────────────────────────────────────── */
+    function switchTab(name) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById('tab-' + name).classList.add('active');
+      document.getElementById('panel-' + name).classList.add('active');
+    }
+
+    /* ── SECTION ACCORDION ───────────────────────────────────── */
+    function toggleSection(id) {
+      const card = document.getElementById(id);
+      const isOpen = card.classList.contains('open');
+      card.classList.toggle('open', !isOpen);
+      card.querySelector('.section-header').setAttribute('aria-expanded', String(!isOpen));
+    }
+
+    /* ── TIPS SECTION ACCORDION ─────────────────────────────── */
+    function toggleTipsSection(header) {
+      const isOpen = header.classList.contains('open');
+      header.classList.toggle('open', !isOpen);
+      const body = header.nextElementSibling;
+      body.classList.toggle('open', !isOpen);
+      const chevron = header.querySelector('.chevron');
+      chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+    }
+
+    /* ── STRATEGY CARD ACCORDION ─────────────────────────────── */
+    function toggleCard(header) {
+      const card = header.parentElement;
+      card.classList.toggle('open');
+    }
+
+    /* ── CHECK ALL ───────────────────────────────────────────── */
+    function checkAll(secId) {
+      const items = document.querySelectorAll(`input[data-section="${secId}"]`);
+      const allChecked = [...items].every(i => i.checked);
+      items.forEach(i => {
+        i.checked = !allChecked;
+        localStorage.setItem('ielts2-' + i.id, String(!allChecked));
+      });
+      updateProgress();
+    }
+
+    /* ── LOAD STATE ──────────────────────────────────────────── */
+    function loadState() {
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        if (localStorage.getItem('ielts2-' + cb.id) === 'true') cb.checked = true;
+      });
+    }
+
+    /* ── UPDATE PROGRESS ─────────────────────────────────────── */
+    function updateProgress() {
+      let globalChecked = 0, globalTotal = 0;
+      Object.keys(SECTIONS).forEach(secId => {
+        const items = document.querySelectorAll(`input[data-section="${secId}"]`);
+        const checked = [...items].filter(i => i.checked).length;
+        const total = items.length;
+        globalChecked += checked; globalTotal += total;
+        const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+        document.getElementById(SECTIONS[secId].bar).style.width = pct + '%';
+        document.getElementById(SECTIONS[secId].pct).textContent = `${checked} / ${total}`;
+        document.getElementById(SECTIONS[secId].label).textContent = `${checked} of ${total} mastered`;
+        document.getElementById(SECTIONS[secId].chip).textContent = `${SECTIONS[secId].name} ${checked}/${total}`;
+        document.getElementById(SECTIONS[secId].btn).textContent = (checked === total) ? 'Uncheck All' : 'Check All';
+      });
+      const globalPct = globalTotal > 0 ? (globalChecked / globalTotal) : 0;
+      document.getElementById('ringFill').style.strokeDashoffset = circumference - globalPct * circumference;
+      document.getElementById('ringPct').textContent = Math.round(globalPct * 100) + '%';
+      document.getElementById('globalCount').textContent = globalChecked;
+      document.getElementById('globalTotal').textContent = globalTotal;
+      if (globalChecked === globalTotal && globalTotal > 0) {
+        setTimeout(() => document.getElementById('celebration').classList.add('show'), 400);
+      }
+    }
+
+    /* ── CELEBRATE DISMISS ───────────────────────────────────── */
+    function dismissCelebration() {
+      document.getElementById('celebration').classList.remove('show');
+    }
+
+    /* ── CHIP SCROLL ─────────────────────────────────────────── */
+    document.querySelectorAll('.chip[data-target]').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const target = document.getElementById(chip.dataset.target);
+        if (target) {
+          if (!target.classList.contains('open')) target.classList.add('open');
+          // Switch to checklist tab first
+          switchTab('checklist');
+          setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+        }
+      });
+    });
+
+    /* ── KEYBOARD SUPPORT ────────────────────────────────────── */
+    document.querySelectorAll('.section-header').forEach(header => {
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); header.click(); }
+      });
+    });
+
+    /* ── CHECKBOX DELEGATION ─────────────────────────────────── */
+    document.addEventListener('change', e => {
+      if (e.target.type === 'checkbox') {
+        localStorage.setItem('ielts2-' + e.target.id, e.target.checked);
+        updateProgress();
+      }
+    });
+
+    /* ── INIT ────────────────────────────────────────────────── */
+    loadState();
+    updateProgress();
+    // Open first strategy card in each section on load
+    document.querySelectorAll('.tips-section-header').forEach(h => {
+      h.classList.add('open');
+      h.nextElementSibling.classList.add('open');
+      h.querySelector('.chevron').style.transform = 'rotate(180deg)';
+    });
+  </script>
+</body>
+</html>
